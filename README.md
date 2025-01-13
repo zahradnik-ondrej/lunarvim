@@ -10,10 +10,6 @@
 
 ***
 
-### [Cheatsheet](https://github.com/zahradnik-ondrej/dotfiles/blob/main/.config/lvim/lunarvim_cheatsheet.md)
-
-***
-
 ### [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#pre-built-archives-2)
 
 1. `wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`
