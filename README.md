@@ -36,7 +36,12 @@ export PATH=$PATH:/opt/nvim-linux64/bin
 ### [neovim-remote](https://github.com/mhinz/neovim-remote?tab=readme-ov-file#installation)
 
 1. `pip3 install neovim-remote`
-2. `echo -e "\nif [ -f ~/.bash_ps1 ]; then\n\t. ~/.bash_ps1\nfi" >> ~/.bashrc`
+2. `echo -e "\nif [ -f ~/.bash_aliases ]; then\n\t. ~/.bash_aliases\nfi" >> ~/.bashrc`  
+``` bash
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+```
 3. `echo 'export NVIM_LISTEN_ADDRESS="/tmp/lvim_server"' >> ~/.bashrc`  
 ``` bash
 export NVIM_LISTEN_ADDRESS="/tmp/lvim_server"
