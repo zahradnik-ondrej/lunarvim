@@ -36,7 +36,7 @@ export PATH=$PATH:/opt/nvim-linux64/bin
 ### [neovim-remote](https://github.com/mhinz/neovim-remote?tab=readme-ov-file#installation)
 
 1. `pip3 install neovim-remote`
-2. `echo -e "\nif [ -f ~/.bash_aliases ]; then\n\t. ~/.bash_aliases\nfi" >> ~/.bashrc`  
+2. `echo -e "\nif [ -f ~/.bash_aliases ]; then\n\t. ~/.bash_aliases\nfi\n" >> ~/.bashrc`  
 ``` bash
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -46,7 +46,7 @@ fi
 ``` bash
 export NVIM_LISTEN_ADDRESS="/tmp/lvim_server"
 ```
-4. `echo -e "\n# lunarvim\nlvim_open() {\n  if command -v nvr >/dev/null 2>&1 && [[ -n \"$NVIM_LISTEN_ADDRESS\" ]]; then\n    nvr -s --nostart --remote-tab \"$@\" || lvim \"$@\"\n  else\n    lvim \"$@\"\n  fi\n}" >> ~/.bash_aliases`
+4. `echo -e "\n# lunarvim\nlvim_open() {\n  if command -v nvr >/dev/null 2>&1 && [[ -n \"$NVIM_LISTEN_ADDRESS\" ]]; then\n    nvr -s --nostart --remote-tab \"$@\" || lvim \"$@\"\n  else\n    lvim \"$@\"\n  fi\n\n}" >> ~/.bash_aliases`
 ``` bash
 # lunarvim
 lvim_open() {
