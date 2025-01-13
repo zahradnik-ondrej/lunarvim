@@ -27,7 +27,7 @@ export PATH=$PATH:/opt/nvim-linux64/bin
 ### [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html#install-rust-and-cargo)
 
 1. `wget -qO- https://sh.rustup.rs | sh`
-2. `source "$HOME/.bashrc"`
+2. `source "~/.bashrc"`
 
 ### [LunarVim](https://www.lunarvim.org/docs/installation#release)
 
@@ -71,3 +71,11 @@ alias lv='lvim_open'
 3. `unzip -oq ~/Hack.zip -d ~/.local/share/fonts`
 4. `rm -f ~/Hack.zip`
 5. `fc-cache -f`
+
+### [LunarVim configuration](https://github.com/zahradnik-ondrej/dotfiles/tree/main/.config/lvim)
+
+1. `mkdir -p ~/.config/lvim`
+2. `wget https://github.com/zahradnik-ondrej/dotfiles/archive/refs/heads/main.zip -O dotfiles.zip`
+3. `unzip dotfiles.zip`
+4. `mv dotfiles-main/.config/lvim/* $HOME/.config/lvim/`
+5. `rm -rf dotfiles.zip dotfiles-main`
