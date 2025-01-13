@@ -16,6 +16,9 @@
 2. `sudo rm -rf /opt/nvim`
 3. `sudo tar -C /opt -xzf nvim-linux64.tar.gz`
 4. `echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc`
+``` bash
+export PATH=$PATH:/opt/nvim-linux64/bin
+```
 
 ### [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html#install-rust-and-cargo)
 
@@ -30,9 +33,27 @@
 
 1. `pip3 install neovim-remote`
 2. `echo -e "\nif [ -f ~/.bash_ps1 ]; then\n\t. ~/.bash_ps1\nfi" >> ~/.bashrc`
-3. `echo "export NVIM_LISTEN_ADDRESS=/tmp/lvim_server" >> ~/.bashrc`
+3. `echo 'export NVIM_LISTEN_ADDRESS="/tmp/lvim_server"' >> ~/.bashrc`  
+``` bash
+export NVIM_LISTEN_ADDRESS="/tmp/lvim_server"
+```
 4. `echo -e "\n# lunarvim\nlvim_open() {\n  if command -v nvr >/dev/null 2>&1 && [[ -n \"$NVIM_LISTEN_ADDRESS\" ]]; then\n    nvr -s --nostart --remote-tab \"$@\" || lvim \"$@\"\n  else\n    lvim \"$@\"\n  fi\n}" >> ~/.bash_aliases`
+``` bash
+# lunarvim
+lvim_open() {
+  if command -v nvr >/dev/null 2>&1 && [[ -n "$NVIM_LISTEN_ADDRESS" ]]; then
+    nvr -s --nostart --remote-tab "$@" || lvim "$@"
+  else
+    lvim "$@"
+  fi
+}
+```
 5. `echo -e "\nalias nvim=\"/opt/nvim-linux64/bin/nvim\"\nalias lvim=\"lvim\"\nalias lv=\"lvim_open\"" >> ~/.bash_aliases`
+``` bash
+alias nvim='/opt/nvim-linux64/bin/nvim'
+alias lvim='lvim'
+alias lv='lvim_open'
+```
 
 ### [Hack Nerd Font](https://www.nerdfonts.com/font-downloads)
 
